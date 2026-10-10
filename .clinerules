@@ -1,0 +1,7 @@
+Project: Scheme Sniper, a government scheme eligibility helper for low-literacy users.
+- Eligibility is decided only by deterministic code reading rules in data/rules/approved/. Never by an LLM.
+- Rules must match schema/rule.schema.json: every condition has field, op, value, type (hard or ambiguous), and every rule has source url, page, exact quote, review_by.
+- Never write to data/rules/approved/. Write drafts only to data/rules/draft/.
+- Never output "You qualify". Outcomes: likely_qualifies, maybe_confirm_at_office, likely_not_eligible, cant_tell.
+- Never store Aadhaar numbers or document images. Never log personal data.
+- Write tests first. Keep code simple. Python 3.11, FastAPI, plain HTML/JS.
